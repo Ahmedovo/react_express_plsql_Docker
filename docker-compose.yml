@@ -1,0 +1,30 @@
+
+services:
+  backend:
+    build: ./backEnd
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+
+  frontend:
+    build: ./frontEnd
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  database:
+    build: ./dataBase
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: retrocode
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+
