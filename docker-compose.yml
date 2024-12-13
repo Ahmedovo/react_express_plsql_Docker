@@ -25,6 +25,8 @@ services:
     build: ./backEnd
     ports:
       - "5000:5000"
+    volumes:
+      - ./backEnd/src:/app  # Mount backend code to automatically update on changes
     depends_on:
       - database
     networks:
@@ -34,6 +36,8 @@ services:
     build: ./frontEnd
     ports:
       - "3000:3000"
+    volumes:
+      - ./frontEnd/src:/app  # Mount frontend code to automatically update on changes
     depends_on:
       - backend
     networks:

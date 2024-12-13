@@ -23,7 +23,10 @@ dbClient.connect()
     console.error('Database connection error', err.stack);
   });
 
-
+// Hello World route
+app.get('/', (req, res) => {
+  res.send('3afak a rebi tkhdm hadi!');
+});
 
 
 // Start the server on port 5000
