@@ -20,4 +20,4 @@ COPY src /app/
 EXPOSE 5000
 
 # Run the backend server with nodemon for auto-reloading
-CMD ["nodemon", "server.js"]
+CMD ["npm", "run","dev"]

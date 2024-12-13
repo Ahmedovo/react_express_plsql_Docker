@@ -25,7 +25,7 @@ dbClient.connect()
 
 // Hello World route
 app.get('/', (req, res) => {
-  res.send('3afak a rebi tkhdm hadi!');
+  res.send('3afak a rebi 3afak eadad');
 });
 
 
