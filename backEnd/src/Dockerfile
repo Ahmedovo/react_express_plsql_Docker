@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /app
 
 # Copy package.json and package-lock.json to install dependencies
-COPY src/package.json src/package-lock.json /app/
+COPY ./package.json ./package-lock.json /app/
 
 # Install backend dependencies
 RUN npm install
@@ -14,7 +14,7 @@ RUN npm install
 RUN npm install -g nodemon
 
 # Copy the rest of the source code into the container
-COPY src /app/
+COPY . /app/
 
 # Expose the backend port
 EXPOSE 5000

@@ -10,8 +10,9 @@ COPY src/package.json src/package-lock.json /app/
 # Install the dependencies
 RUN npm install
 
+
 # Copy the rest of the frontend files into the container
-COPY src /app/
+COPY ./src /app/
 
 # Expose the port that the React app will run on
 EXPOSE 3000

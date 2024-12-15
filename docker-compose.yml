@@ -22,7 +22,7 @@ services:
       - app_network
 
   backend:
-    build: ./backEnd
+    build: ./backEnd/src
     ports:
       - "5000:5000"
     volumes:
